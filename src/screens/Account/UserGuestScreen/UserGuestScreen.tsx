@@ -2,11 +2,11 @@ import { View, ScrollView } from "react-native";
 import { Text, Button, Image } from "react-native-elements";
 import { styles } from "./UserGuestScreen.styles";
 import { useNavigation } from "@react-navigation/native";
-
+import { screen } from "../../../utils";
 export function UserGuestScreen() {
   const navigation = useNavigation();
   const goToLogin = () => {
-    navigation.navigate("/login");
+    navigation.navigate(screen.account.login as never);
   };
   return (
     <ScrollView centerContent={true} style={styles.content}>
